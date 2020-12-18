@@ -76,16 +76,16 @@ const mainReducer = (state = initialState, action) =>
         draft.currentValue = draft.input;
         if (draft.operator === 'plus') {
           draft.input =
-            parseInt(draft.previousValue) + parseInt(draft.currentValue);
+            Number(draft.previousValue) + Number(draft.currentValue);
         } else if (draft.operator === 'minus') {
           draft.input =
-            parseInt(draft.previousValue) - parseInt(draft.currentValue);
+            Number(draft.previousValue) - Number(draft.currentValue);
         } else if (draft.operator === 'multiply') {
           draft.input =
-            parseInt(draft.previousValue) * parseInt(draft.currentValue);
+            Number(draft.previousValue) * Number(draft.currentValue);
         } else if (draft.operator === 'divide') {
           draft.input =
-            parseInt(draft.previousValue) / parseInt(draft.currentValue);
+            Number(draft.previousValue) / Number(draft.currentValue);
         }
         break;
       default:
